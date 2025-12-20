@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>You Are Only Mine ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #2a0845, #0b0c2a 60%, #020111);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ================= STARS ================= */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(1px 1px at 20% 30%, #fff, transparent),
+        radial-gradient(1px 1px at 60% 20%, #fff, transparent),
+        radial-gradient(1px 1px at 40% 80%, #fff, transparent);
+    opacity: 0.35;
+    z-index: 0;
+}
+
+/* ================= CLOUDS ================= */
+.cloud {
+    position: absolute;
+    background: rgba(255,255,255,0.12);
+    border-radius: 50px;
+    filter: blur(4px);
+    animation: moveClouds linear infinite;
+    z-index: 1;
+}
+.cloud1 { width: 140px; height: 40px; top: 70px; left: -150px; animation-duration: 90s; }
+.cloud2 { width: 180px; height: 50px; top: 150px; left: -200px; animation-duration: 130s; }
+.cloud3 { width: 120px; height: 35px; top: 240px; left: -180px; animation-duration: 110s; }
+
+.cloud::before, .cloud::after {
+    content: '';
+    position: absolute;
+    background: rgba(255,255,255,0.12);
+    border-radius: 50px;
+}
+.cloud::before { width: 70px; height: 50px; top: -20px; left: 20px; }
+.cloud::after  { width: 90px; height: 55px; top: -25px; left: 60px; }
+
+@keyframes moveClouds {
+    from { transform: translateX(0); }
+    to { transform: translateX(160vw); }
+}
+
+/* ================= COMMON ================= */
+.heart {
+    font-size: 95px;
+    animation: beat 1.2s infinite;
+}
+@keyframes beat {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
+button {
+    margin-top: 40px;
+    padding: 18px 55px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff4d6d, #ff9a9e);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 35px rgba(255,77,109,1);
+}
+
+/* ================= FIRST PAGE (CENTER) ================= */
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;   /* vertical center */
+    align-items: center;       /* horizontal center */
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+.firstContent {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.message {
+    font-size: 1.35em;
+    line-height: 1.8;
+    background: rgba(0,0,0,0.55);
+    padding: 35px;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+/* ================= SECOND PAGE (LEFT) ================= */
+#secondPage {
+    display: none;
+    min-height: 100vh;
+    padding: 120px 20px 260px;
+    animation: fadeIn 1.5s ease;
+    position: relative;
+    z-index: 3;
+    text-align: left;
+}
+
+.frame {
+    width: 260px;
+    height: 340px;
+    margin: 40px auto;
+    padding: 12px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ff4d6d, #ff9a9e);
+    box-shadow: 0 0 45px rgba(255,105,180,0.8);
+}
+
+.frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 4px solid rgba(255,255,255,0.85);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= HILLS ================= */
+.hills {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 260px;
+    background:
+        radial-gradient(circle at 10% 100%, #1b1b3a 65%, transparent 66%),
+        radial-gradient(circle at 40% 100%, #16213e 65%, transparent 66%),
+        radial-gradient(circle at 70% 100%, #0f3460 65%, transparent 66%),
+        radial-gradient(circle at 95% 100%, #1a1a2e 65%, transparent 66%);
+    z-index: 1;
+}
+</style>
+</head>
+
+<body>
+
+<!-- CLOUDS -->
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+<div class="cloud cloud3"></div>
+
+<!-- FIRST PAGE -->
+<div class="container" id="firstPage">
+    <div class="firstContent">
+        <div class="heart">❤️</div>
+
+        <h1>Hey My Zahrati,<br>I love you so much.</h1>
+        <h1>You Are Only Mine</h1>
+        <h2>My heart chose you — forever</h2>
+
+        <div class="message">
+            <p>Like the sky, clouds, and birds, my love surrounds you everywhere.</p>
+            <p>Like this tree, my heart grows love only for you.</p>
+            <p>Forever yours ❤️</p>
+        </div>
+
+        <button onclick="openSecondPage()">Click Here ❤️</button>
+    </div>
+</div>
+
+<!-- SECOND PAGE -->
+<div id="secondPage">
+    <div class="heart" style="text-align:center;">💖</div>
+
+    <h1>
+        তুমি আর তো কারো নও, শুধু আমার<br>
+        যত দূরে সরে যাও, রবে আমার
+    </h1>
+
+    <h2>Ami tomar ekmatro jamai, bor, husband, shob kichu.</h2>
+
+    <h2>
+        Parthor shathe kotha bolba na, amar kharap lage.
+        Ami tomake onek valobashi.
+        Buker vitore kapakapi shuru kore.
+        Amake ektu bujho pushpo.
+    </h2>
+
+    <h2>
+        Tahajjute khodar kase tomake chaibo.
+        Tumi amar first priority.
+        Amar future er shob kichu jure tumi.
+    </h2>
+
+    <h2>I LOVE YOU PUSHPO ❤️</h2>
+
+    <div class="frame">
+        <img src="Pushpo.jpg" alt="Photo">
+    </div>
+</div>
+
+<div class="hills"></div>
+
+<script>
+function openSecondPage() {
+    document.getElementById("firstPage").style.display = "none";
+    document.getElementById("secondPage").style.display = "block";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
+
